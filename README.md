@@ -1,1 +1,1 @@
-# GCC-GAN-Fair-Gulf-Cooperation-Council-Face-Generator
+# GCC-Face-Generator
