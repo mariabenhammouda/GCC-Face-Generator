@@ -3,6 +3,11 @@
 
 The face and its features represent the most intuitive and personal aspect of humans. Its uniqueness underscores the value of extracting features and information, termed soft biometrics, which greatly enhances recognition performance and refines search algorithms for facial images. While these advancements offer promising applications across various domains such as law enforcement, surveillance, advertising, and social media profiling, a critical gap emerged upon reviewing existing literature. More specifically, there is a notable absence of representation of the Arab world, and when present, it tends to be unfairly represented. Moreover, the current face generators available in the market fall short of accurately generating specific subgroups within the Arab population, such as Levantine, Gulf Cooperation Council (GCC), Egyptian, and North African individuals.
 
+
+The objective is to train the Generative Adversarial Network (GAN) using a contemporary dataset that includes individuals from diverse occupations in the Gulf region, such as footballers, politicians, journalists, and others. This dataset will encompass variations in hair and eye colors, aiming to generate images that promote inclusivity across all ethnic groups within the region.
+
+While this approach is a step towards inclusivity, it's important to note that true inclusion extends beyond solely representing local populations. We must also consider the migrant communities within the Gulf region. Furthermore, inclusivity entails representing individuals beyond just celebrities or well-known figures. This presents challenges in creating datasets and content that accurately capture the diverse demographics and experiences of all people within the region, raising questions of consent and cultural considerations specific to the region.
+
 ### To my knowledge, this is the first GAN-powered face image generator tailored to GCC representation.
 Below are three images generated using different AI text-to-image face generators, highlighting evident misrepresentation. These images frequently depict stereotypes and Arab tropes, such as black beards, head wraps, and the portrayal of stereotypical "Arabian" attire reminiscent of ancient eras:
 
@@ -11,8 +16,6 @@ Below are three images generated using different AI text-to-image face generator
 
 
 ## Approach
-
-The objective is to train the Generative Adversarial Network (GAN) using a contemporary dataset that includes individuals from diverse occupations in the Gulf region, such as footballers, politicians, journalists, and others. This dataset will encompass variations in hair and eye colors, aiming to generate images that promote inclusivity across all ethnic groups within the region.
 
 The code creates a Generative Adversarial Network (GAN) architecture with TensorFlow and Keras. The GAN is made up of two models: the generator and the discriminator. The generator creates bogus pictures from random noise, but the discriminator distinguishes between actual and fake images. The generator network has layers, including Dense, LeakyReLU, Reshape, Conv2D, and Conv2D. The transpose layers convert the input noise into a realistic image. To categorize pictures as real or fake, the discriminator network uses Conv2D, LeakyReLU, Dropout, and Dense layers. In addition, the algorithm creates the GAN model by joining the generator and discriminator models. It makes the discriminator non-trainable during GAN training to prevent it from being updated when the generator is taught. The GAN model is compiled with an RMSprop optimizer and binary cross-entropy loss function for training.
 
