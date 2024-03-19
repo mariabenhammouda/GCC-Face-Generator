@@ -9,9 +9,11 @@ Below are three images generated using different AI text-to-image face generator
 ![903a67ec-039d-456b-a35c-a060a1f94956](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/614bf0c8-2596-4d3a-8808-ac3fcea0051e) 
 
 
-The objective is to train the Generative Adversarial Network (GAN) on a contemporary dataset featuring individuals from the Gulf region, encompassing diverse attires, hair, and eye colors, to create images that strive for inclusivity across all ethnic groups in the region.
 
 ## Approach
+
+The objective is to train the Generative Adversarial Network (GAN) using a contemporary dataset that includes individuals from diverse occupations in the Gulf region, such as footballers, politicians, journalists, and others. This dataset will encompass variations in hair and eye colors, aiming to generate images that promote inclusivity across all ethnic groups within the region.
+
 The code creates a Generative Adversarial Network (GAN) architecture with TensorFlow and Keras. The GAN is made up of two models: the generator and the discriminator. The generator creates bogus pictures from random noise, but the discriminator distinguishes between actual and fake images. The generator network has layers, including Dense, LeakyReLU, Reshape, Conv2D, and Conv2D. The transpose layers convert the input noise into a realistic image. To categorize pictures as real or fake, the discriminator network uses Conv2D, LeakyReLU, Dropout, and Dense layers. In addition, the algorithm creates the GAN model by joining the generator and discriminator models. It makes the discriminator non-trainable during GAN training to prevent it from being updated when the generator is taught. The GAN model is compiled with an RMSprop optimizer and binary cross-entropy loss function for training.
 
 ## Results
