@@ -13,9 +13,6 @@ Below are three images generated using different AI text-to-image face generator
 
 ![44e77f76-5238-4b9d-a84a-0afde8ab1258](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/3a41faca-13e9-40d6-946e-b4d4fa3f674f)
 
-![6a04a76d-d483-46f1-ab86-9686753bbb94](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/b345456c-e9a2-41d3-9fe3-98fa2f49b75e)
-
-
 ## Approach
 The code creates a Generative Adversarial Network (GAN) architecture with TensorFlow and Keras. The GAN is made up of two models: the generator and the discriminator. The generator creates bogus pictures from random noise, but the discriminator distinguishes between actual and fake images. The generator network has layers, including Dense, LeakyReLU, Reshape, Conv2D, and Conv2D. The transpose layers convert the input noise into a realistic image. To categorize pictures as real or fake, the discriminator network uses Conv2D, LeakyReLU, Dropout, and Dense layers. In addition, the algorithm creates the GAN model by joining the generator and discriminator models. It makes the discriminator non-trainable during GAN training to prevent it from being updated when the generator is taught. The GAN model is compiled with an RMSprop optimizer and binary cross-entropy loss function for training.
 
