@@ -7,9 +7,7 @@ The face and its features represent the most intuitive and personal aspect of hu
 Below are three images generated using different AI text-to-image face generators, highlighting evident misrepresentation. These images frequently depict stereotypes and Arab tropes, including black beards, head wraps, and stereotypical "Arabian" clothing:
 
 
-![903a67ec-039d-456b-a35c-a060a1f94956](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/614bf0c8-2596-4d3a-8808-ac3fcea0051e)
-
-![44e77f76-5238-4b9d-a84a-0afde8ab1258](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/3a41faca-13e9-40d6-946e-b4d4fa3f674f)
+![903a67ec-039d-456b-a35c-a060a1f94956](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/614bf0c8-2596-4d3a-8808-ac3fcea0051e) ![44e77f76-5238-4b9d-a84a-0afde8ab1258](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/3a41faca-13e9-40d6-946e-b4d4fa3f674f)
 
 ## Approach
 The code creates a Generative Adversarial Network (GAN) architecture with TensorFlow and Keras. The GAN is made up of two models: the generator and the discriminator. The generator creates bogus pictures from random noise, but the discriminator distinguishes between actual and fake images. The generator network has layers, including Dense, LeakyReLU, Reshape, Conv2D, and Conv2D. The transpose layers convert the input noise into a realistic image. To categorize pictures as real or fake, the discriminator network uses Conv2D, LeakyReLU, Dropout, and Dense layers. In addition, the algorithm creates the GAN model by joining the generator and discriminator models. It makes the discriminator non-trainable during GAN training to prevent it from being updated when the generator is taught. The GAN model is compiled with an RMSprop optimizer and binary cross-entropy loss function for training.
@@ -28,12 +26,6 @@ I am experimenting with different activation functions and the number of layers 
 Currently, the generated faces exhibit a cartoonish appearance and often appear blurry. Interestingly, when I asked participants from Arab regions to identify or guess the origin of these individuals, they consistently associated them with the Gulf region.
 
 
-![Screen Shot 2024-03-19 at 12 54 07 PM](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/27434cf8-fd62-4fcc-bf9b-dd32400845d9)
-
-
-![Screen Shot 2024-03-19 at 12 55 29 PM](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/0f066d0b-8dde-47f9-98ca-f64b770ec004)
-
-
-![Screen Shot 2024-03-19 at 12 53 07 PM](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/eb629c4e-4abf-4dbb-8b1e-83df84c0f618)
+![Screen Shot 2024-03-19 at 12 54 07 PM](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/27434cf8-fd62-4fcc-bf9b-dd32400845d9) ![Screen Shot 2024-03-19 at 12 55 29 PM](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/0f066d0b-8dde-47f9-98ca-f64b770ec004) ![Screen Shot 2024-03-19 at 12 53 07 PM](https://github.com/mariabenhammouda/GCC-Face-Generator/assets/102983688/eb629c4e-4abf-4dbb-8b1e-83df84c0f618)
 
 I would also like to give credit to this paper for creating the GCC training dataset: N. A. A. -H. And M. Prince, "A Classification of Arab Ethnicity Based on Face Image Using Deep Learning Approach," in IEEE Access, vol. 9, pp. 50755-50766, 2021, doi: 10.1109/ACCESS.2021.3069022.
